@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" data-toggle="collapse"
+     data-target="#collapsibleNavbar">
+    <a class="navbar-brand" href="#">Carousel</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navb">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="javascript:void(0)">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
+        </form>
+    </div>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="data:image/jpeg;base64,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"
+                 alt="Los Angeles" width="1100" height="500">
+            <div class="carousel-caption">
+                <h3>Traveling</h3>
+                <p>Have a great time!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEwkTI3KlWIzVnhXovDnMws3Cuku4KzZEsuFH7TwkitNGDoo1"
+                 alt="Chicago" width="1100" height="500">
+            <div class="carousel-caption">
+                <h3>Photos</h3>
+                <p>Take your memory</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfI7FTn9ub1a8CtZlOaySLW2hs7GHXKXRxPlxpzCtJIV3Ov3_"
+                 alt="New York" width="1100" height="500">
+            <div class="carousel-caption">
+                <h3>Party time</h3>
+                <p>Get rid of stress</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="container" style="margin-top:80px">
+    <div class="row">
+        <div class="col-4 text-center">
+
+            <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+                    class=" rounded-circle" alt="Hot girl" width="200" height="200">
+
+
+            <h4 class="card-title">Jane Doe</h4>
+            <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-secondary">View</a>
+
+        </div>
+
+        <div class="col-4 text-center">
+
+            <div class="card-img-top"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+                    class="rounded-circle " alt="Hot girl" width="200" height="200">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Jane Doe</h4>
+                <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                <a href="#" class="btn btn-secondary">View</a>
+            </div>
+        </div>
+        <div class="col-4 text-center">
+            <div class="card-img-top"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+                    class="rounded-circle" alt="Hot girl" width="200" height="200">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Jane Doe</h4>
+                <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                <a href="#" class="btn btn-secondary">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5" style="margin-top:15%">
+        <h4>Jane Doe</h4>
+        <p>Some example text some example text. Jane Doe is an architect and engineer.
+            example text some example text. Jane Doe is an architect and engineer.Some example text some
+            example text. Jane Doe is an architect and engineer</p>
+    </div>
+    <div class="col-7">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+             class="float-lg-right mh-100" alt="Hot girl" width="600" height="600">
+    </div>
+</div>
+<div class="row">
+    <div class="col-7">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+             class="float-lg-left mh-100" alt="Hot girl" width="600" height="600">
+    </div>
+    <div class="col-5" style="margin-top:15%">
+        <h4>Jane Doe</h4>
+        <p>Some example text some example text. Jane Doe is an architect and engineer.
+            example text some example text. Jane Doe is an architect and engineer.Some example text some
+            example text. Jane Doe is an architect and engineer</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5" style="margin-top:15%">
+        <h4>Jane Doe</h4>
+        <p>Some example text some example text. Jane Doe is an architect and engineer.
+            example text some example text. Jane Doe is an architect and engineer.Some example text some
+            example text. Jane Doe is an architect and engineer</p>
+    </div>
+    <div class="col-7">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT4deNIHeljyUwP2rjDFxb0YoZkyBU10Hu81NYaS20u5WNtuy"
+             class="float-lg-right mh-100" alt="Hot girl" width="600" height="600">
+    </div>
+</div>
+
+</body>
+</html>
